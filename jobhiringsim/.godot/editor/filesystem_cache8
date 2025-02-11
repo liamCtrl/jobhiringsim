@@ -1,3 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738863739
-icon.svg::CompressedTexture2D::6856734360554269410::1738863703::1738863741::1::::<><>::
+::res://::1739301522
+icon.svg::CompressedTexture2D::6856734360554269410::1738868254::1739296136::1::::<><>::
+jobselector.gd::GDScript::-1::1739300784::0::1::::<>Node2D<>::
+node_2d.tscn::PackedScene::3726904092931975371::1739301710::0::1::::<><>::res://resume_gen.gd<>res://jobselector.gd
+resume_gen.gd::GDScript::-1::1739301710::0::1::::<>Node2D<>::
