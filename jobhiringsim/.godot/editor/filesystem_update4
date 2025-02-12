@@ -1,5 +1,3 @@
-res://node_2d.tscn
-res://node_2d.gd
+res://mainscene.tscn
 res://jobselector.gd
 res://resume_gen.gd
-res://mainscene.tscn

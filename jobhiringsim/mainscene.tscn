@@ -6,26 +6,32 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_rspis")
 
+[node name="experiencesLabel" type="Label" parent="."]
+offset_right = 92.0
+offset_bottom = 23.0
+scale = Vector2(1.5, 1.5)
+text = "Placeholder"
+
+[node name="skillLabel" type="Label" parent="."]
+offset_top = 150.0
+offset_right = 92.0
+offset_bottom = 173.0
+scale = Vector2(1.5, 1.5)
+text = "Placeholder"
+
+[node name="educationLabel" type="Label" parent="."]
+offset_top = 300.0
+offset_right = 92.0
+offset_bottom = 323.0
+scale = Vector2(1.5, 1.5)
+text = "Placeholder"
+
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("2_pd75m")
 
-[node name="experiencesLabel" type="Label" parent="."]
-offset_left = 16.0
-offset_top = 15.0
-offset_right = 108.0
-offset_bottom = 38.0
-text = "Placeholder"
-
-[node name="experiencesLabel2" type="Label" parent="."]
-offset_left = 16.0
-offset_top = 42.0
-offset_right = 108.0
-offset_bottom = 65.0
-text = "Placeholder"
-
-[node name="experiencesLabel3" type="Label" parent="."]
-offset_left = 16.0
-offset_top = 67.0
-offset_right = 108.0
-offset_bottom = 90.0
+[node name="jobTitleLabel" type="Label" parent="Node2D"]
+offset_left = 750.0
+offset_right = 842.0
+offset_bottom = 23.0
+scale = Vector2(1.5, 1.5)
 text = "Placeholder"

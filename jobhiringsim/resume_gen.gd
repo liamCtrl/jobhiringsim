@@ -6,25 +6,44 @@ var education = ["Marketing","Word Salads","Bureaucratic Vocabulary"]
 var skills = ["PhD in Extraterrestrialism","PhD in Interstellar Interactions",
 "Bachelors Degree in Space Administration"]
 
-func generateResume():
+func generateExperiences():
 	var recruitResume = []
 	var count = randf_range(1,experiences.size() - 1)
 	while recruitResume.size() < count:
 		var newAttribute = experiences.pick_random()
 		if not recruitResume.has(newAttribute):
 			recruitResume.push_back(newAttribute)
-	print(recruitResume)
+	var resumeStr = array_to_string(recruitResume)
+	$experiencesLabel.set_text(resumeStr)
 	
+func generateEducation():
+	var recruitResume = []
+	var count = randf_range(1,education.size() - 1)
+	while recruitResume.size() < count:
+		var newAttribute = education.pick_random()
+		if not recruitResume.has(newAttribute):
+			recruitResume.push_back(newAttribute)
+	var resumeStr = array_to_string(recruitResume)
+	$educationLabel.set_text(resumeStr)
+	
+func generateSkills():
+	var recruitResume = []
+	var count = randf_range(1,skills.size() - 1)
+	while recruitResume.size() < count:
+		var newAttribute = skills.pick_random()
+		if not recruitResume.has(newAttribute):
+			recruitResume.push_back(newAttribute)
+	var resumeStr = array_to_string(recruitResume)
+	$skillLabel.set_text(resumeStr)
+	
+func array_to_string(Array) -> String:
+	var string = ""
+	for i in Array:
+		string += String(i) + "
+		"
+	return string
 
-
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	generateResume()
-	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	generateExperiences()
+	generateEducation()
+	generateSkills()

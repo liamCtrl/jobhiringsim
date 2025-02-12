@@ -1,9 +1,5 @@
 extends Node2D
 
-var experiences = []
-var education = []
-var skills = []
-
 func randomJob():
 	var jobList = ["Senior Extraterrestrial Interstellar Space Advertisement Manager",
 	"Senior Intergalactic Corporate Gateway Security Manager Team Lead",
@@ -15,8 +11,15 @@ func randomJob():
 	"Chief Royal Unskian Entertainment Officer",
 	"Martian Surface Sanitation and Maintenance Technician for Habitat Cleanliness and Environmental Upkeep for the Unskian Empire"]
 	var randomJob = jobList.pick_random()
-	if randomJob.has("Senior Extraterrestrial Interstellar Space Advertisement Manager"):
+	if "Senior Extraterrestrial Interstellar Space Advertisement Manager":
 		seisam()
+
+func array_to_string(Array) -> String:
+	var string = ""
+	for i in Array:
+		string += String(i) + "
+		"
+	return string
 
 func seisam():
 	var experiences = ["20 Years of Experience with Corporate Greed Systems",
@@ -25,3 +28,4 @@ func seisam():
 	var education = ["Marketing","Word Salads","Bureaucratic Vocabulary"]
 	var skills = ["PhD in Extraterrestrialism","PhD in Interstellar Interactions",
 	"Bachelors Degree in Space Administration"]
+	$jobTitleLabel.set_text("Senior Extraterrestrial Interstellar Space Advertisement Manager")
