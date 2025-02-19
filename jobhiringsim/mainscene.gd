@@ -14,8 +14,8 @@ func _process(delta: float) -> void:
 
 
 func _on_accept_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().reload_current_scene() 
 
 
 func _on_deny_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().reload_current_scene() 
