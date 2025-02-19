@@ -1,2 +1,9 @@
 res://mainscene.tscn
-res://mainscene.gd
+res://Themes/AcceptTheme.tres
+res://Themes/DeclineTheme.tres
+res://Themes/Screen.tres
+res://Themes/FormTheme.tres
+res://Themes/ImageBackground.tres
+res://control.tscn
+res://resume_gen.gd
+res://jobselector.gd

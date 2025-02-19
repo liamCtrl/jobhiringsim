@@ -34,7 +34,7 @@ func generateExperiences():
 		if not experiencesResume.has(newAttribute):
 			experiencesResume.push_back(newAttribute)
 	var resumeStr = array_to_string(experiencesResume)
-	$experiencesLabel.set_text(resumeStr)
+	$JobApplication/VBoxContainer/experiencesLabel.set_text(resumeStr)
 	
 func generateEducation():
 	var educationResume = []
@@ -44,7 +44,7 @@ func generateEducation():
 		if not educationResume.has(newAttribute):
 			educationResume.push_back(newAttribute)
 	var resumeStr = array_to_string(educationResume)
-	$educationLabel.set_text(resumeStr)
+	$JobApplication/VBoxContainer/educationLabel.set_text(resumeStr)
 	
 func generateSkills():
 	var skillsResume = []
@@ -54,7 +54,7 @@ func generateSkills():
 		if not skillsResume.has(newAttribute):
 			skillsResume.push_back(newAttribute)
 	var resumeStr = array_to_string(skillsResume)
-	$skillLabel.set_text(resumeStr)
+	$JobApplication/VBoxContainer/skillLabel.set_text(resumeStr)
 	
 func array_to_string(Array) -> String:
 	var string = ""

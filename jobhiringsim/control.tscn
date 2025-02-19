@@ -1,0 +1,183 @@
+[gd_scene load_steps=9 format=3 uid="uid://ch4gtax6h2a2o"]
+
+[ext_resource type="Theme" uid="uid://bq4icnu6qufep" path="res://Themes/Screen.tres" id="1_ixme1"]
+[ext_resource type="Theme" path="res://Themes/ScreenBack.tres" id="1_k5n33"]
+[ext_resource type="Theme" uid="uid://j0abxb1jcjmd" path="res://Themes/FormTheme.tres" id="2_j3ew0"]
+[ext_resource type="Theme" uid="uid://c5ntpg4xr5vqe" path="res://Themes/ImageBackground.tres" id="4_0abdw"]
+[ext_resource type="Theme" uid="uid://7pmn80dneoci" path="res://Themes/DeclineTheme.tres" id="4_wig4r"]
+[ext_resource type="Texture2D" uid="uid://no5ytkqrl4v0" path="res://Pictures/LizardGuy.png" id="5_nqhcp"]
+[ext_resource type="Theme" uid="uid://dvcly2yrdop52" path="res://Themes/AcceptTheme.tres" id="5_vd16a"]
+[ext_resource type="FontFile" uid="uid://yu4c0pbokqty" path="res://GUIPack/Eirian-Regular.ttf" id="6_wkq1h"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ComputerBorder" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 1154.0
+offset_bottom = 648.0
+color = Color(0.447059, 0.45098, 0.470588, 1)
+
+[node name="Screen" type="ColorRect" parent="ComputerBorder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -551.0
+offset_top = -302.0
+offset_right = 549.0
+offset_bottom = 304.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_k5n33")
+color = Color(0, 0, 0, 1)
+
+[node name="Grid" type="Panel" parent="ComputerBorder/Screen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -541.0
+offset_top = -297.0
+offset_right = 541.0
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ixme1")
+
+[node name="JobApplication" type="Panel" parent="ComputerBorder/Screen"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 15.0
+offset_right = 509.0
+offset_bottom = 551.0
+theme = ExtResource("2_j3ew0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ComputerBorder/Screen/JobApplication"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -249.5
+offset_right = 221.0
+offset_bottom = 249.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ComputerBorder/Screen/JobApplication/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ComputerBorder/Screen/JobApplication/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("4_0abdw")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ComputerBorder/Screen/JobApplication/VBoxContainer/HBoxContainer/Panel"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ComputerBorder/Screen/JobApplication/VBoxContainer/HBoxContainer/Panel/AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("5_nqhcp")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ComputerBorder/Screen/JobApplication/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_wkq1h")
+theme_override_font_sizes/font_size = 20
+text = "Applicant
+"
+
+[node name="SkillsTag" type="Label" parent="ComputerBorder/Screen/JobApplication/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_wkq1h")
+text = "SKILLS
+"
+
+[node name="SkillsList" type="Label" parent="ComputerBorder/Screen/JobApplication/VBoxContainer"]
+layout_mode = 2
+
+[node name="ExperienceTag" type="Label" parent="ComputerBorder/Screen/JobApplication/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_wkq1h")
+text = "EXPERIENCE"
+
+[node name="ExperienceList" type="Label" parent="ComputerBorder/Screen/JobApplication/VBoxContainer"]
+layout_mode = 2
+
+[node name="Requirements" type="Panel" parent="ComputerBorder/Screen"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 16.0
+offset_right = 1058.0
+offset_bottom = 552.0
+theme = ExtResource("2_j3ew0")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ComputerBorder/Screen/Requirements"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -249.5
+offset_right = 221.0
+offset_bottom = 249.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AcceptButton" type="Button" parent="."]
+layout_mode = 1
+offset_left = 895.0
+offset_top = 585.0
+offset_right = 1045.0
+offset_bottom = 617.0
+theme = ExtResource("5_vd16a")
+text = "ACCEPT
+"
+
+[node name="DeclineButton" type="Button" parent="."]
+layout_mode = 1
+offset_left = 105.0
+offset_top = 585.0
+offset_right = 255.0
+offset_bottom = 617.0
+theme = ExtResource("4_wig4r")
+text = "DECLINE
+"
