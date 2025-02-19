@@ -7,3 +7,4 @@ res://Themes/ImageBackground.tres
 res://control.tscn
 res://resume_gen.gd
 res://jobselector.gd
+res://mainscene.gd

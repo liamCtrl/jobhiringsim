@@ -1,8 +1,7 @@
 extends Node2D
 
-@onready var resume_node = get_node("randomizedResume")
-@onready var job_node = get_node("randomizedJob")
-
+@onready var resume_node = get_node("ComputerBorder/Screen/randomizedResume")
+@onready var job_node = get_node("ComputerBorder/Screen/Requirements/randomizedJob")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
