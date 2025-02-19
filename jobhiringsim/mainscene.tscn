@@ -1,37 +1,96 @@
-[gd_scene load_steps=3 format=3 uid="uid://btdltigiwybt8"]
+[gd_scene load_steps=5 format=3 uid="uid://btdltigiwybt8"]
 
 [ext_resource type="Script" path="res://resume_gen.gd" id="1_rspis"]
+[ext_resource type="Script" path="res://mainscene.gd" id="1_wby23"]
 [ext_resource type="Script" path="res://jobselector.gd" id="2_pd75m"]
+[ext_resource type="Texture2D" uid="uid://c8n0tbvqdnlpk" path="res://pastel-orange-color-solid-background-1920x1080.png" id="3_s2805"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_wby23")
+
+[node name="randomizedResume" type="Node2D" parent="."]
 script = ExtResource("1_rspis")
 
-[node name="experiencesLabel" type="Label" parent="."]
-offset_right = 92.0
-offset_bottom = 23.0
-scale = Vector2(1.5, 1.5)
+[node name="Sprite2D" type="Sprite2D" parent="randomizedResume"]
+z_index = -1
+position = Vector2(231.98, 260)
+scale = Vector2(0.263563, 0.439999)
+texture = ExtResource("3_s2805")
+
+[node name="experiencesLabel" type="Label" parent="randomizedResume"]
+offset_left = 18.0
+offset_top = 50.0
+offset_right = 110.0
+offset_bottom = 73.0
 text = "Placeholder"
 
-[node name="skillLabel" type="Label" parent="."]
-offset_top = 150.0
-offset_right = 92.0
-offset_bottom = 173.0
-scale = Vector2(1.5, 1.5)
+[node name="skillLabel" type="Label" parent="randomizedResume"]
+offset_left = 18.0
+offset_top = 200.0
+offset_right = 110.0
+offset_bottom = 223.0
 text = "Placeholder"
 
-[node name="educationLabel" type="Label" parent="."]
-offset_top = 300.0
-offset_right = 92.0
-offset_bottom = 323.0
-scale = Vector2(1.5, 1.5)
+[node name="educationLabel" type="Label" parent="randomizedResume"]
+offset_left = 18.0
+offset_top = 350.0
+offset_right = 110.0
+offset_bottom = 373.0
 text = "Placeholder"
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="randomizedJob" type="Node2D" parent="."]
+position = Vector2(24, 0)
 script = ExtResource("2_pd75m")
 
-[node name="jobTitleLabel" type="Label" parent="Node2D"]
-offset_left = 750.0
-offset_right = 842.0
-offset_bottom = 23.0
-scale = Vector2(1.5, 1.5)
+[node name="Sprite2D2" type="Sprite2D" parent="randomizedJob"]
+z_index = -1
+position = Vector2(797.48, 331.2)
+scale = Vector2(0.304708, 0.497777)
+texture = ExtResource("3_s2805")
+
+[node name="jobTitleLabel" type="Label" parent="randomizedJob"]
+offset_left = 535.0
+offset_top = 86.0
+offset_right = 627.0
+offset_bottom = 109.0
 text = "Placeholder"
+
+[node name="reqExperienceLabel" type="Label" parent="randomizedJob"]
+offset_left = 535.0
+offset_top = 186.0
+offset_right = 627.0
+offset_bottom = 209.0
+text = "Placeholder"
+
+[node name="reqSkillLabel" type="Label" parent="randomizedJob"]
+offset_left = 535.0
+offset_top = 336.0
+offset_right = 627.0
+offset_bottom = 359.0
+text = "Placeholder"
+
+[node name="reqEducationLabel" type="Label" parent="randomizedJob"]
+offset_left = 535.0
+offset_top = 486.0
+offset_right = 627.0
+offset_bottom = 509.0
+text = "Placeholder"
+
+[node name="acceptButton" type="Button" parent="."]
+offset_left = 11.0
+offset_top = 565.0
+offset_right = 71.0
+offset_bottom = 596.0
+scale = Vector2(4.1295, 2)
+text = "Accept"
+
+[node name="denyButton" type="Button" parent="."]
+offset_left = 268.0
+offset_top = 566.0
+offset_right = 328.0
+offset_bottom = 597.0
+scale = Vector2(4.1295, 2)
+text = "Deny"
+
+[connection signal="pressed" from="acceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="denyButton" to="." method="_on_deny_button_pressed"]
